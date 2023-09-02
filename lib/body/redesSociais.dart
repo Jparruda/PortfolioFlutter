@@ -2,17 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class RedeSocial extends StatelessWidget {
-  const RedeSocial({
-    super.key,
-    required this.section5,
-  });
+  const RedeSocial({super.key});
 
-  final GlobalKey section5;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      key: section5,
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(

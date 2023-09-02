@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({
-    super.key,
-    required this.section1,
-  });
+class HomePage extends StatelessWidget {
+   const HomePage ({super.key});
 
-  final GlobalKey section1;
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +12,7 @@ class Home extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    key: section1,
-                    color: Color.fromARGB(255, 11, 23, 26),
+                    color: const Color.fromARGB(255, 11, 23, 26),
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 0.2,
                     child: const Row(

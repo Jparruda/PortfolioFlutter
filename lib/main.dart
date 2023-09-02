@@ -5,39 +5,19 @@ import 'package:go_router/go_router.dart';
 void main() {
   setUrlStrategy(PathUrlStrategy());
   runApp(const MainApp());
-
-
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({
-    super.key,
-  });
+  const MainApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    final route = GoRouter(
-      initialLocation: '/',
-      routes: [
-        GoRoute(
-            path: "/",
-            pageBuilder: (context, state) {
-            return CustomTransitionPage(
-              key: state.pageKey,
-              child: Home(),
-              transitionsBuilder:
-                  (context, animation, secondaryAnimation, child) {
-                return FadeTransition(
-                  opacity: CurveTween(curve: Curves.easeInOutCirc)
-                      .animate(animation),
-                  child: child,
-                );
-              },
-            );
-          },
-        ),
-      ],
-    );
+    final route = GoRouter(initialLocation: '/', routes: [
+      GoRoute(
+          path: "/",
+          pageBuilder: (context, state) => const MaterialPage(child: HomeFrame())),
+    ]);
+
     return MaterialApp.router(
       title: "Portfólio",
       debugShowCheckedModeBanner: false,
@@ -51,41 +31,32 @@ class MainApp extends StatelessWidget {
 
 var scaffoldKey = GlobalKey<ScaffoldState>();
 
-class Home extends StatelessWidget {
-   Home({super.key});
-    GlobalKey section1 = GlobalKey();
-    GlobalKey section2 = GlobalKey();
-    GlobalKey section3 = GlobalKey();
-    GlobalKey section4 = GlobalKey();
-    GlobalKey section5 = GlobalKey();
+class HomeFrame extends StatelessWidget {
+  const HomeFrame({Key? key});
+
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<GlobalKey> keys = [
-      section1,
-      section2,
-      section3,
-      section4,
-      section5,
+      GlobalKey(),
+      GlobalKey(),
+      GlobalKey(),
+      GlobalKey(),
+      GlobalKey(),
     ];
-
 
     return Scaffold(
       key: scaffoldKey,
-      body: Stack(
-        children: [
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                Home(key: keys[0],)
-              ],
-            ),
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeFrame(
+              key: keys[0],
+            )
+          ],
+        ),
       ),
     );
   }
 }
-
-

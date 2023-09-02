@@ -2,18 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Conquistas extends StatelessWidget {
-  const Conquistas({
-    super.key,
-    required this.section2,
-  });
+   const Conquistas ({super.key});
 
-  final GlobalKey section2;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        key: section2,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
