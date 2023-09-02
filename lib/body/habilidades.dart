@@ -7,12 +7,10 @@ class Habilidades extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
         color: const Color(0xFF4A8E94),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-      ),
-    );
+      );
   }
 }

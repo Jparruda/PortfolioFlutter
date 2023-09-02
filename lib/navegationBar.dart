@@ -18,8 +18,7 @@ class SquareNavegation extends StatelessWidget {
   final GlobalKey section5;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox(
+    return SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
@@ -91,7 +90,6 @@ class SquareNavegation extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

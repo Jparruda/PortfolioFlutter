@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
+import 'package:jpflutter/body/conquistas.dart';
+import 'package:jpflutter/body/habilidades.dart';
+import 'package:jpflutter/body/home.dart';
+import 'package:jpflutter/body/redesSociais.dart';
+import 'package:jpflutter/body/sobreMim.dart';
+import 'package:jpflutter/navegationBar.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -15,7 +21,7 @@ class MainApp extends StatelessWidget {
     final route = GoRouter(initialLocation: '/', routes: [
       GoRoute(
           path: "/",
-          pageBuilder: (context, state) => const MaterialPage(child: HomeFrame())),
+          pageBuilder: (context, state) => const MaterialPage(child: Home())),
     ]);
 
     return MaterialApp.router(
@@ -31,8 +37,8 @@ class MainApp extends StatelessWidget {
 
 var scaffoldKey = GlobalKey<ScaffoldState>();
 
-class HomeFrame extends StatelessWidget {
-  const HomeFrame({Key? key});
+class Home extends StatelessWidget {
+  const Home({Key? key});
 
 
   @override
@@ -48,14 +54,37 @@ class HomeFrame extends StatelessWidget {
 
     return Scaffold(
       key: scaffoldKey,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HomeFrame(
-              key: keys[0],
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                HomePage(
+                  key: keys[0],
+                ),
+                Conquistas(
+                  key: keys[1],
+                ),
+                Habilidades(
+                  key: keys[2],
+                ),
+                SobreMim(
+                  key: keys[3],
+                ),
+                RedeSocial(
+                  key: keys[4],
+                )
+              ],
+            ),
+          ),
+          SquareNavegation(
+            section1: keys[0],
+            section2: keys[1],
+            section3: keys[2],
+            section4: keys[3],
+            section5: keys[4]
             )
-          ],
-        ),
+        ],
       ),
     );
   }

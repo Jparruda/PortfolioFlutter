@@ -6,8 +6,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
+    return Stack(
             children: [
               Column(
                 children: [
@@ -53,7 +52,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-    );
+          );
   }
 }

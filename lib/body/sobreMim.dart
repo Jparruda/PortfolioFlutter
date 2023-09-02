@@ -6,12 +6,10 @@ class SobreMim extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+return Container(
         color: const Color.fromARGB(255, 74, 142, 148),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-      ),
-    );
+      );
   }
 }

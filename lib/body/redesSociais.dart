@@ -6,8 +6,7 @@ class RedeSocial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
@@ -15,6 +14,6 @@ class RedeSocial extends StatelessWidget {
               colors: [Color(0xFF4A8E94), Color(0xFF020202)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter)),
-    ));
+    );
   }
 }

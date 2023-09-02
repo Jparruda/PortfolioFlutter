@@ -7,8 +7,7 @@ class Conquistas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
@@ -17,7 +16,6 @@ class Conquistas extends StatelessWidget {
           Color.fromARGB(255, 140, 28, 11),
           Color.fromARGB(255, 74, 142, 148)
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-      ),
-    );
+      );
   }
 }
