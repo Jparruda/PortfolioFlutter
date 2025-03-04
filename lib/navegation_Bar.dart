@@ -47,14 +47,14 @@ class _SquareNavegationState extends State<SquareNavegation> {
                   ),
                 ),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min, // Adicionado mainAxisSize: MainAxisSize.min
+                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     HoverTextButton(
                       text: 'Home',
                       textStyle: GoogleFonts.passionOne(
                         textStyle: const TextStyle(
-                          fontSize: 14, // Reduzido o tamanho da fonte
+                          fontSize: 14, 
                           color: Color(0xFFD0DEE7),
                         ),
                       ),
@@ -69,7 +69,7 @@ class _SquareNavegationState extends State<SquareNavegation> {
                       text: 'Sobre',
                       textStyle: GoogleFonts.passionOne(
                         textStyle: const TextStyle(
-                          fontSize: 14, // Reduzido o tamanho da fonte
+                          fontSize: 14, 
                           color: Color(0xFFD0DEE7),
                         ),
                       ),
@@ -84,7 +84,7 @@ class _SquareNavegationState extends State<SquareNavegation> {
                       text: 'Projetos',
                       textStyle: GoogleFonts.passionOne(
                         textStyle: const TextStyle(
-                          fontSize: 14, // Reduzido o tamanho da fonte
+                          fontSize: 14, 
                           color: Color(0xFFD0DEE7),
                         ),
                       ),
@@ -99,7 +99,7 @@ class _SquareNavegationState extends State<SquareNavegation> {
                       text: 'Habilidades',
                       textStyle: GoogleFonts.passionOne(
                         textStyle: const TextStyle(
-                          fontSize: 14, // Reduzido o tamanho da fonte
+                          fontSize: 14, 
                           color: Color(0xFFD0DEE7),
                         ),
                       ),
@@ -114,7 +114,7 @@ class _SquareNavegationState extends State<SquareNavegation> {
                       text: 'Outros',
                       textStyle: GoogleFonts.passionOne(
                         textStyle: const TextStyle(
-                          fontSize: 14, // Reduzido o tamanho da fonte
+                          fontSize: 14, 
                           color: Color(0xFFD0DEE7),
                         ),
                       ),
