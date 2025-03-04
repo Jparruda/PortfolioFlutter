@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'widgets/hover_text_button.dart';
 
-class SquareNavegation extends StatefulWidget { 
+class SquareNavegation extends StatefulWidget {
   const SquareNavegation({
     super.key,
     required this.section1,
@@ -34,11 +34,11 @@ class _SquareNavegationState extends State<SquareNavegation> {
             child: Container(
               color: Colors.transparent,
               margin: const EdgeInsets.all(15),
-              height: 50,
-              width: 250,
+              height: MediaQuery.of(context).size.width * 0.03,
+              width: MediaQuery.of(context).size.height * 0.5,
               child: Container(
                 decoration: const BoxDecoration(
-                  color: Color(0x37FFFFFF),
+                  color: Color.fromARGB(38, 255, 255, 255),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50.0),
                     topRight: Radius.circular(50.0),
@@ -47,67 +47,84 @@ class _SquareNavegationState extends State<SquareNavegation> {
                   ),
                 ),
                 child: Row(
+                  mainAxisSize: MainAxisSize.min, // Adicionado mainAxisSize: MainAxisSize.min
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                      tooltip: "Home Page",
+                    HoverTextButton(
+                      text: 'Home',
+                      textStyle: GoogleFonts.passionOne(
+                        textStyle: const TextStyle(
+                          fontSize: 14, // Reduzido o tamanho da fonte
+                          color: Color(0xFFD0DEE7),
+                        ),
+                      ),
                       onPressed: () async {
                         return await Scrollable.ensureVisible(
-                          widget.section1.currentContext!, // Acessando a propriedade do widget
+                          widget.section1.currentContext!,
                           duration: const Duration(milliseconds: 600),
                         );
                       },
-                      icon: const Icon(Icons.radio_button_unchecked),
-                      color: Colors.white,
                     ),
-                    IconButton(
-                      tooltip: "Conquistas",
+                    HoverTextButton(
+                      text: 'Sobre',
+                      textStyle: GoogleFonts.passionOne(
+                        textStyle: const TextStyle(
+                          fontSize: 14, // Reduzido o tamanho da fonte
+                          color: Color(0xFFD0DEE7),
+                        ),
+                      ),
                       onPressed: () async {
                         return await Scrollable.ensureVisible(
-                          widget.section2.currentContext!, // Acessando a propriedade do widget
+                          widget.section2.currentContext!,
                           duration: const Duration(milliseconds: 600),
                         );
                       },
-                      icon: const Icon(Icons.radio_button_unchecked),
-                      color: Colors.white,
                     ),
-                    IconButton(
-                      tooltip: "Habilidades",
+                    HoverTextButton(
+                      text: 'Projetos',
+                      textStyle: GoogleFonts.passionOne(
+                        textStyle: const TextStyle(
+                          fontSize: 14, // Reduzido o tamanho da fonte
+                          color: Color(0xFFD0DEE7),
+                        ),
+                      ),
                       onPressed: () async {
                         return await Scrollable.ensureVisible(
-                          widget.section3.currentContext!, // Acessando a propriedade do widget
+                          widget.section3.currentContext!,
                           duration: const Duration(milliseconds: 600),
                         );
                       },
-                      icon: const Icon(Icons.radio_button_unchecked),
-                      color: Colors.white,
                     ),
-                    IconButton(
-                      tooltip: "Sobre Mim",
+                    HoverTextButton(
+                      text: 'Habilidades',
+                      textStyle: GoogleFonts.passionOne(
+                        textStyle: const TextStyle(
+                          fontSize: 14, // Reduzido o tamanho da fonte
+                          color: Color(0xFFD0DEE7),
+                        ),
+                      ),
                       onPressed: () async {
                         return await Scrollable.ensureVisible(
-                          widget.section4.currentContext!, // Acessando a propriedade do widget
+                          widget.section4.currentContext!,
                           duration: const Duration(milliseconds: 600),
                         );
                       },
-                      icon: const Icon(Icons.radio_button_unchecked),
-                      color: Colors.white,
                     ),
-                     HoverTextButton(
-            text: 'Outros',
-            textStyle: GoogleFonts.passionOne(
-              textStyle: const TextStyle(
-                fontSize: 17,
-                color: Color(0xFFD0DEE7),
-              ),
-            ),
-            onPressed:() async {
-                          return await Scrollable.ensureVisible(
-                            widget.section5.currentContext!, // Acessando a propriedade do widget
-                            duration: const Duration(milliseconds: 600),
-                          );
-                        },
-          ),
+                    HoverTextButton(
+                      text: 'Outros',
+                      textStyle: GoogleFonts.passionOne(
+                        textStyle: const TextStyle(
+                          fontSize: 14, // Reduzido o tamanho da fonte
+                          color: Color(0xFFD0DEE7),
+                        ),
+                      ),
+                      onPressed: () async {
+                        return await Scrollable.ensureVisible(
+                          widget.section5.currentContext!,
+                          duration: const Duration(milliseconds: 600),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),
