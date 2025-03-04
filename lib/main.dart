@@ -6,7 +6,7 @@ import 'package:jpflutter/body/habilidades.dart';
 import 'package:jpflutter/body/home.dart';
 import 'package:jpflutter/body/redesSociais.dart';
 import 'package:jpflutter/body/sobreMim.dart';
-import 'package:jpflutter/navegationBar.dart';
+import 'package:jpflutter/navegation_Bar.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,13 +16,15 @@ class HomePage extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.2,
               alignment: Alignment.centerRight,
               padding: const EdgeInsets.all(16),
-              child: const Text(
+              child:  Text(
                 "João Arruda",
-                style: TextStyle(
+                style: GoogleFonts.homemadeApple(
+                  textStyle: const TextStyle(
                   fontSize: 50,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
+              )
               ),
             ),
             Container(
