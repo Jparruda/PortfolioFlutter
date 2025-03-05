@@ -34,8 +34,8 @@ class _SquareNavegationState extends State<SquareNavegation> {
             child: Container(
               color: Colors.transparent,
               margin: const EdgeInsets.all(15),
-              height: MediaQuery.of(context).size.width * 0.03,
-              width: MediaQuery.of(context).size.height * 0.5,
+              height: 35,
+              width: 370,
               child: Container(
                 decoration: const BoxDecoration(
                   color: Color.fromARGB(38, 255, 255, 255),

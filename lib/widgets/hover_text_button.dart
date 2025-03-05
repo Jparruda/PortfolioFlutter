@@ -11,6 +11,7 @@ class HoverTextButton extends StatefulWidget {
     required this.text,
     this.textStyle,
     this.onPressed,
+    
   }) : super(key: key);
 
   @override
@@ -25,16 +26,19 @@ class _HoverTextButtonState extends State<HoverTextButton> {
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovering = true),
       onExit: (_) => setState(() => _isHovering = false),
-      child: TextButton(
-        onPressed: widget.onPressed,
-        child: Text(
-          widget.text,
-          style: widget.textStyle?.copyWith(
-                decoration: _isHovering
-                    ? TextDecoration.underline
-                    : TextDecoration.none,
-              ) ??
-              TextStyle(decoration: _isHovering ? TextDecoration.underline : TextDecoration.none),
+      child: Tooltip(
+        message: widget.text,
+        child: TextButton(
+          onPressed: widget.onPressed,
+          child: Text(
+            widget.text,
+            style: widget.textStyle?.copyWith(
+                  decoration: _isHovering
+                      ? TextDecoration.underline
+                      : TextDecoration.none,
+                ) ??
+                TextStyle(decoration: _isHovering ? TextDecoration.underline : TextDecoration.none),
+          ),
         ),
       ),
     );
