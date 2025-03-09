@@ -11,7 +11,7 @@ class Habilidades extends StatelessWidget {
     return Stack(
       children: [
         Container(
-            color: const Color(0xFF4A8E94),
+            color: Color(0xFF000000),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
           ),
@@ -24,7 +24,7 @@ class Habilidades extends StatelessWidget {
                 child: const Text("/Habilidades",
                 style: TextStyle(
                   fontSize: 68,
-                  color: Color(0xFF87DAE1),
+                  color: Color(0xFF000000),
                   fontWeight: FontWeight.bold
                 ),
                 ),

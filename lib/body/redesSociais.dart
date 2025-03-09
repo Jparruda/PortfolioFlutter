@@ -9,11 +9,7 @@ class RedeSocial extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Color(0xFF4A8E94), Color(0xFF020202)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter)),
+      color: Color(0xFF000000),
     );
   }
 }

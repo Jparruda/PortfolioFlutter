@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
       child: Stack( // Usando Stack para sobrepor widgets
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.8,
+            height: MediaQuery.of(context).size.height * 0.85,
             decoration: const BoxDecoration(
               color: Color(0xff0E1011),
               borderRadius: BorderRadius.only(bottomRight: Radius.circular(70)),
@@ -43,9 +43,6 @@ class HomePage extends StatelessWidget {
                     offset: Offset(0, 3),
                   ),
                 ],
-              ),
-              child: Center(
-                child: Text('Sobreposto'),
               ),
             ),
           ),
