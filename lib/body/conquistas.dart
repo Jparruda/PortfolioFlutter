@@ -13,9 +13,8 @@ class Conquistas extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-            Color.fromARGB(255, 11, 23, 26),
-            Color.fromARGB(255, 140, 28, 11),
-            Color.fromARGB(255, 74, 142, 148)
+            Color(0xFFA1CFD3),
+            Color(0xFF267599)
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
         ),
         Column(
