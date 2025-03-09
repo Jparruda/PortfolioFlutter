@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
-import 'package:jpflutter/body/conquistas.dart';
-import 'package:jpflutter/body/habilidades.dart';
+import 'package:jpflutter/body/sobre_mim.dart';
+import 'package:jpflutter/body/projetos.dart';
 import 'package:jpflutter/body/home.dart';
-import 'package:jpflutter/body/redesSociais.dart';
-import 'package:jpflutter/body/sobreMim.dart';
+import 'package:jpflutter/body/outros.dart';
+import 'package:jpflutter/body/habilidades.dart';
 import 'package:jpflutter/navegation_Bar.dart';
 
 void main() {
@@ -61,16 +61,16 @@ class Home extends StatelessWidget {
                 HomePage(
                   key: keys[0],
                 ),
-                Conquistas(
+                SobreMim(
                   key: keys[1],
                 ),
-                Habilidades(
+                Projetos(
                   key: keys[2],
                 ),
-                SobreMim(
+                Habilidades(
                   key: keys[3],
                 ),
-                RedeSocial(
+                Outros(
                   key: keys[4],
                 )
               ],

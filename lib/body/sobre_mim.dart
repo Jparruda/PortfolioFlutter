@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class Conquistas extends StatelessWidget {
-  const Conquistas({super.key});
+class SobreMim extends StatelessWidget {
+  const SobreMim({super.key});
 
   @override
   Widget build(BuildContext context) {

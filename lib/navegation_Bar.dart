@@ -55,7 +55,7 @@ class _SquareNavegationState extends State<SquareNavegation> {
                       textStyle: GoogleFonts.passionOne(
                         textStyle: const TextStyle(
                           fontSize: 14, 
-                          color: Color(0xFFD0DEE7),
+                          color: Color(0xFFD0DEE7)
                         ),
                       ),
                       onPressed: () async {
